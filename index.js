@@ -3,7 +3,7 @@ const { env } = require('process');
 const DEBUG = env.DEBUG;
 const SECONDS = env.SECONDS || 10
 const CITIES = env.CITIES?.length ? env.CITIES.split(',') : null;
-const DEMO = env.DEMO || false;
+const DEMO = env.DEMO === "true" || false;
 
 const log = (args) => {
     if (DEBUG) console.log(args);
